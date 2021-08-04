@@ -3,6 +3,8 @@ import models.VehicleType;
 import services.ParkingLotService;
 import services.VehicleManagementService;
 
+import java.util.Scanner;
+
 public class Driver {
 
 
@@ -10,6 +12,7 @@ public class Driver {
     public static void main(String[] args) {
 
         ParkingLotService parkingLotService = new ParkingLotService();
+        //testing approach
         parkingLotService.createParkingLot();
         parkingLotService.addFloor(1);
         parkingLotService.addSlot(1,1);
@@ -67,6 +70,29 @@ public class Driver {
 
         vehicleManagementService.bookSlot(bike3);
 
+        //TODO:CLI based Approach
+        Scanner sc = new Scanner(System.in);
+        boolean exit = false;
+        while (!exit) {
+
+            String commandLine = sc.nextLine();
+            String[] commands = commandLine.split(" ");
+            String commandType = commands[0];
+
+            switch (commandType) {
+                case "create_parking_lot":
+                    break;
+                case "park_vehicle":
+                    break;
+                case "unpark_vehicle":
+                    break;
+                case "display":
+                    break;
+                case "exit":
+                    exit = true;
+                    break;
+            }
+        }
 
     }
 

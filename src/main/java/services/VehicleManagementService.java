@@ -1,6 +1,5 @@
 package services;
 
-import exceptions.SlotNotFoundException;
 import models.Floor;
 import models.Slot;
 import models.Vehicle;
